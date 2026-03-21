@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cassino → Gaeta in 3 Giorni — Bikepacking | Tour Guide – Luisanna Vespa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --gold: #c9a84c; --gold-lt: #e8c76a; --dark: #1a1208; --brown: #2e1e0a; --cream: #faf6ef; --text: #3d2b10; --muted: #7a6242; --green: #3a5a2a; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--cream); overflow-x: hidden; }
+    .lang-bar { position: fixed; top: 0; right: 0; z-index: 1000; display: flex; margin: 12px 16px 0 0; }
+    .lang-btn { background: rgba(26,18,8,0.5); backdrop-filter: blur(10px); border: 1px solid rgba(201,168,76,0.5); color: #fff; font-size: 0.75rem; font-weight: 600; padding: 6px 14px; cursor: pointer; transition: 0.25s; }
+    .lang-btn:first-child { border-radius: 20px 0 0 20px; }
+    .lang-btn:last-child { border-radius: 0 20px 20px 0; }
+    .lang-btn.active { background: var(--gold); color: var(--dark); border-color: var(--gold); }
+    
+    .tour-hero { position: relative; height: 60vh; min-height: 400px; display: flex; align-items: flex-end; padding: 60px 24px; }
+    .tour-hero-bg { position: absolute; inset: 0; background-image: url('03_tour-bici/bici-06-cassino-gaeta-mare.jpg'); background-size: cover; background-position: center; filter: brightness(0.6); }
+    .tour-hero-content { position: relative; z-index: 2; max-width: 1100px; margin: 0 auto; width: 100%; }
+    .category-badge { display: inline-block; background: var(--gold); color: var(--dark); font-size: 0.75rem; font-weight: 700; padding: 6px 16px; border-radius: 20px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.1em; }
+    .tour-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; color: #fff; line-height: 1.1; margin-bottom: 10px; }
+    
+    .tour-content { max-width: 1100px; margin: 60px auto; padding: 0 24px; display: grid; grid-template-columns: 2fr 1fr; gap: 60px; }
+    .tour-main h2 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--dark); margin-bottom: 24px; }
+    .tour-desc { font-size: 1.1rem; line-height: 1.8; color: var(--muted); margin-bottom: 40px; }
+    
+    .program-list { list-style: none; margin-bottom: 40px; }
+    .program-list li { position: relative; padding-left: 36px; margin-bottom: 20px; font-size: 1.05rem; line-height: 1.6; color: var(--text); font-weight: 500; }
+    .program-list li::before { content: '✓'; color: var(--gold); position: absolute; left: 0; top: -2px; font-size: 1.2rem; background: rgba(201,168,76,0.15); width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; border-radius: 50%; }
+    
+    .tour-sidebar { background: #fff; border-radius: 16px; padding: 32px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); height: fit-content; position: sticky; top: 80px; }
+    .detail-item { margin-bottom: 24px; border-bottom: 1px solid #eee; padding-bottom: 16px; }
+    .detail-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .detail-label { font-size: 0.8rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; margin-bottom: 6px; }
+    .detail-value { font-size: 1.1rem; color: var(--dark); font-weight: 500; }
+    
+    .tour-cta { display: block; width: 100%; text-align: center; background: var(--dark); color: var(--gold); font-weight: 700; text-decoration: none; padding: 18px; border-radius: 50px; text-transform: uppercase; letter-spacing: 0.05em; transition: 0.3s; margin-top: 30px; border: 1px solid var(--gold); }
+    .tour-cta:hover { background: var(--gold); color: var(--dark); }
+    
+    .back-btn { display: inline-flex; align-items: center; gap: 8px; color: #fff; text-decoration: none; font-weight: 500; position: absolute; top: 30px; left: 30px; z-index: 10; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.8; transition: 0.3s; }
+    .back-btn:hover { opacity: 1; transform: translateX(-4px); }
+    
+    html[lang="it"] [data-lang="en"] { display: none !important; }
+    html[lang="en"] [data-lang="it"] { display: none !important; }
+    
+    footer { background: #0d0900; color: rgba(255,255,255,0.4); text-align: center; padding: 40px; font-size: 0.85rem; margin-top: 80px;}
+    footer a { color: var(--gold); text-decoration: none; }
+    
+    @media (max-width: 900px) {
+      .tour-content { grid-template-columns: 1fr; }
+      .tour-sidebar { position: static; }
+      .tour-hero { padding: 80px 24px 40px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="lang-bar">
+    <button class="lang-btn active" id="btn-it" onclick="setLang('it')">🇮🇹 IT</button>
+    <button class="lang-btn" id="btn-en" onclick="setLang('en')">🇬🇧 EN</button>
+  </div>
+  
+  <a href="index.html" class="back-btn">← <span data-lang="it">Torna alla Home</span><span data-lang="en">Back to Home</span></a>
+
+  <header class="tour-hero">
+    <div class="tour-hero-bg"></div>
+    <div class="tour-hero-content">
+      <div class="category-badge">
+        <span data-lang="it">Tour in Bici</span>
+        <span data-lang="en">Bike Tours</span>
+      </div>
+      <h1>
+        <span data-lang="it">Cassino → Gaeta in 3 Giorni — Bikepacking</span>
+        <span data-lang="en">Cassino → Gaeta in 3 Days — Bikepacking</span>
+      </h1>
+    </div>
+  </header>
+
+  <section class="tour-content">
+    <div class="tour-main">
+      <h2>
+        <span data-lang="it">Il Programma</span>
+        <span data-lang="en">The Program</span>
+      </h2>
+      <p class="tour-desc">
+        <span data-lang="it">Dalla sorgente del Gari alla Montagna Spaccata. 3 tappe con pernottamenti, luggage transfer e assistenza meccanica. Arrivo al mare.</span>
+        <span data-lang="en">From the Gari spring to Montagna Spaccata. 3 stages with overnight stays, luggage transfer, and mechanical support. Arrival at the sea.</span>
+      </p>
+      
+      <ul class="program-list">
+        <li>Tappa 1: Cassino - Ausonia</li>\n        <li>Tappa 2: Ausonia - Sperlonga</li>\n        <li>Tappa 3: Sperlonga - Gaeta</li>\n        <li>Arrivo alla Montagna Spaccata</li>\n        <li>Bagno nel Mar Tirreno</li>
+      </ul>
+      <ul class="program-list" data-lang="en" style="display:none;">
+        <li>Stage 1: Cassino - Ausonia</li>\n        <li>Stage 2: Ausonia - Sperlonga</li>\n        <li>Stage 3: Sperlonga - Gaeta</li>\n        <li>Arrival at Montagna Spaccata</li>\n        <li>Swim in the Tyrrhenian Sea</li>
+      </ul>
+    </div>
+    
+    <aside class="tour-sidebar">
+      
+      <div class="detail-item">
+        <div class="detail-label">
+           <span data-lang="it">Durata</span>
+           <span data-lang="en">Duration</span>
+        </div>
+        <div class="detail-value">
+           <span data-lang="it">3 gg</span>
+           <span data-lang="en">3 days</span>
+        </div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">
+           <span data-lang="it">Distanza</span>
+           <span data-lang="en">Distance</span>
+        </div>
+        <div class="detail-value">
+           <span data-lang="it">120 km</span>
+           <span data-lang="en">120 km</span>
+        </div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">
+           <span data-lang="it">Difficoltà</span>
+           <span data-lang="en">Difficulty</span>
+        </div>
+        <div class="detail-value">
+           <span data-lang="it">Esperto</span>
+           <span data-lang="en">Expert</span>
+        </div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">
+           <span data-lang="it">Bici</span>
+           <span data-lang="en">Bike</span>
+        </div>
+        <div class="detail-value">
+           <span data-lang="it">Gravel</span>
+           <span data-lang="en">Gravel</span>
+        </div>
+      </div>
+      <a href="mailto:luisanna.v@gmail.com" class="tour-cta">
+        <span data-lang="it">Richiedi Informazioni</span>
+        <span data-lang="en">Request Information</span>
+      </a>
+      <a href="https://wa.me/393489128901" class="tour-cta" style="background:#25D366; color:#fff; border-color:#25D366; margin-top:15px;">
+        WhatsApp
+      </a>
+    </aside>
+  </section>
+
+  <footer>
+    &copy; 2026 Luisanna Vespa. <span data-lang="it">Tutti i diritti riservati.</span><span data-lang="en">All rights reserved.</span> <br>
+    Questo sito fa uso di foto e demo - Accompagnatrice Turistica Abilitata.
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById('btn-' + lang).classList.add('active');
+      
+      const itEl = document.querySelector('ul.program-list:not([data-lang="en"])');
+      const enEl = document.querySelector('ul.program-list[data-lang="en"]');
+      if (lang === 'en') {
+          itEl.style.display = 'none';
+          enEl.style.display = 'block';
+      } else {
+          itEl.style.display = 'block';
+          enEl.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>

@@ -719,7 +719,39 @@
         padding: 60px 20px;
       }
     }
-  </style>
+  
+    /* ─── FILTER BAR ────────────────────────────────── */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 50px;
+    }
+    .filter-btn {
+      background: transparent;
+      border: 1px solid rgba(201, 168, 76, 0.4);
+      color: var(--muted);
+      padding: 10px 24px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      outline: none;
+      font-family: 'Inter', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--gold);
+      color: var(--dark);
+      border-color: var(--gold);
+    }
+    .tour-card {
+      transition: opacity 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+    }
+\n  </style>
 </head>
 
 <body>
@@ -833,6 +865,7 @@
     </div>
   </section>
 
+  
   <!-- ══ TOURS ══════════════════════════════════════════ -->
   <section class="tours" id="tours">
     <div class="section-inner">
@@ -842,221 +875,391 @@
           <span data-lang="en">My Experiences</span>
         </p>
         <h2 class="section-title">
-          <span data-lang="it">Quattro modi di scoprire il territorio</span>
-          <span data-lang="en">Four ways to discover the region</span>
+          <span data-lang="it">Scopri il territorio passo dopo passo</span>
+          <span data-lang="en">Discover the region step by step</span>
         </h2>
         <p class="section-desc">
-          <span data-lang="it">Ogni tour è costruito su misura, lento e autentico, pensato per chi vuole davvero capire
-            un posto.</span>
-          <span data-lang="en">Every tour is tailor-made, slow and authentic – designed for those who truly want to
-            understand a place.</span>
+          <span data-lang="it">Seleziona la categoria per esplorare i tour.</span>
+          <span data-lang="en">Select a category to explore the tours.</span>
         </p>
       </div>
-
-      <div class="tours-grid">
-        <!-- Enogastronomico -->
-        <div class="tour-card" onclick="document.getElementById('modal-food').showModal()">
-          <img src="food.png" class="tour-card-img" alt="Tour enogastronomico Ciociaria" />
-          <div class="tour-card-body">
-            <span class="tour-icon">🍷</span>
-            <h3>
-              <span data-lang="it">Tour Enogastronomico</span>
-              <span data-lang="en">Food &amp; Wine Tour</span>
-            </h3>
-            <p>
-              <span data-lang="it">Degustazioni di vini locali, formaggi DOP, salumi artigianali, olio extravergine e
-                pasta fatta a mano. Clicca per il programma.</span>
-              <span data-lang="en">Tastings of local wines, DOP cheeses, artisan cured meats, extra-virgin olive oil and
-                hand-made pasta. Click for itinerary.</span>
-            </p>
-            <span class="tour-tag">
-              <span data-lang="it">Scopri di più ➔</span>
-              <span data-lang="en">Learn more ➔</span>
-            </span>
-          </div>
-        </div>
-        <dialog id="modal-food" class="tour-modal">
-          <div class="modal-content">
-            <button class="close-btn" onclick="document.getElementById('modal-food').close()">&times;</button>
-            <h3 class="modal-title">
-              <span data-lang="it">Programma Enogastronomico</span>
-              <span data-lang="en">Food &amp; Wine Itinerary</span>
-            </h3>
-            <div class="modal-plan">
-              <ul>
-                <li><span data-lang="it">Incontro e caffè di benvenuto.</span><span data-lang="en">Meet &amp; Greet with
-                    a welcome coffee.</span></li>
-                <li><span data-lang="it">Visita in cantina locale tra le colline del Cesanese: degustazione vino tra i
-                    filari.</span><span data-lang="en">Visit a local winery in the Cesanese hills: wine tasting among
-                    the vineyards.</span></li>
-                <li><span data-lang="it">Tappa in caseificio: assaggio di formaggi DOP e ricotta fresca appena
-                    fatta.</span><span data-lang="en">Dairy stop: tasting of DOP cheeses and freshly made
-                    ricotta.</span></li>
-                <li><span data-lang="it">Pranzo tradizionale in agriturismo con pasta all'uovo (fino fini,
-                    maccaroni).</span><span data-lang="en">Traditional farmhouse lunch with handmade egg pasta (fino
-                    fini, maccaroni).</span></li>
-                <li><span data-lang="it">Visita a un antico frantoio e degustazione guidata di olio EVO.</span><span
-                    data-lang="en">Visit to an ancient olive mill and guided extra-virgin olive oil tasting.</span></li>
-              </ul>
-            </div>
-            <a href="mailto:luisanna.v@gmail.com" class="modal-btn">
-              <span data-lang="it">Richiedi Preventivo</span><span data-lang="en">Request a Quote</span>
-            </a>
-          </div>
-        </dialog>
-
-        <!-- Naturalistico -->
-        <div class="tour-card" onclick="document.getElementById('modal-nature').showModal()">
-          <img src="nature.png" class="tour-card-img" alt="Tour naturalistico Ciociaria" />
-          <div class="tour-card-body">
-            <span class="tour-icon">🌿</span>
-            <h3>
-              <span data-lang="it">Tour Naturalistico</span>
-              <span data-lang="en">Nature Tour</span>
-            </h3>
-            <p>
-              <span data-lang="it">Escursioni nel Parco Nazionale d'Abruzzo, gole, laghi e boschi. Passeggiate lente,
-                aria pura. Clicca per il programma.</span>
-              <span data-lang="en">Hikes in the Abruzzi National Park, gorges, lakes and forests. Slow walks, pure air.
-                Click for itinerary.</span>
-            </p>
-            <span class="tour-tag">
-              <span data-lang="it">Scopri di più ➔</span>
-              <span data-lang="en">Learn more ➔</span>
-            </span>
-          </div>
-        </div>
-        <dialog id="modal-nature" class="tour-modal">
-          <div class="modal-content">
-            <button class="close-btn" onclick="document.getElementById('modal-nature').close()">&times;</button>
-            <h3 class="modal-title">
-              <span data-lang="it">Programma Naturalistico</span>
-              <span data-lang="en">Nature Itinerary</span>
-            </h3>
-            <div class="modal-plan">
-              <ul>
-                <li><span data-lang="it">Incontro al mattino presto e briefing sul percorso.</span><span
-                    data-lang="en">Early morning meet-up and route briefing.</span></li>
-                <li><span data-lang="it">Trekking guidato nelle Gole del Melfa o nel Parco Nazionale d'Abruzzo (su
-                    misura in base ai partecipanti).</span><span data-lang="en">Guided hike in the Melfa Gorges or
-                    Abruzzi National Park (tailored to participants).</span></li>
-                <li><span data-lang="it">Osservazione della flora e fauna locale con spiegazioni sul
-                    territorio.</span><span data-lang="en">Observation of local flora and fauna with territorial
-                    insights.</span></li>
-                <li><span data-lang="it">Pic-nic panoramico in quota con prodotti tipici locali.</span><span
-                    data-lang="en">Panoramic high-altitude picnic featuring local delicacies.</span></li>
-                <li><span data-lang="it">Ritorno e relax al tramonto sulle rive del lago (es. Lago di Posta
-                    Fibreno).</span><span data-lang="en">Return and sunset relaxation by a local lake (e.g. Lake Posta
-                    Fibreno).</span></li>
-              </ul>
-            </div>
-            <a href="mailto:luisanna.v@gmail.com" class="modal-btn">
-              <span data-lang="it">Richiedi Preventivo</span><span data-lang="en">Request a Quote</span>
-            </a>
-          </div>
-        </dialog>
-
-        <!-- Storico -->
-        <div class="tour-card" onclick="document.getElementById('modal-history').showModal()">
-          <img src="hero.png" class="tour-card-img" alt="Tour storico Ciociaria Cassino" />
-          <div class="tour-card-body">
-            <span class="tour-icon">🏛️</span>
-            <h3>
-              <span data-lang="it">Tour Storico</span>
-              <span data-lang="en">Historical Tour</span>
-            </h3>
-            <p>
-              <span data-lang="it">Borghi medievali, resti romani, e i luoghi della Battaglia di Montecassino. Clicca
-                per il programma.</span>
-              <span data-lang="en">Medieval villages, Roman remains, and the sites of the Battle of Monte Cassino. Click
-                for itinerary.</span>
-            </p>
-            <span class="tour-tag">
-              <span data-lang="it">Scopri di più ➔</span>
-              <span data-lang="en">Learn more ➔</span>
-            </span>
-          </div>
-        </div>
-        <dialog id="modal-history" class="tour-modal">
-          <div class="modal-content">
-            <button class="close-btn" onclick="document.getElementById('modal-history').close()">&times;</button>
-            <h3 class="modal-title">
-              <span data-lang="it">Programma Storico</span>
-              <span data-lang="en">Historical Itinerary</span>
-            </h3>
-            <div class="modal-plan">
-              <ul>
-                <li><span data-lang="it">Visita all'antica rocca e passeggiata nei borghi medievali (es. Anagni, la
-                    città dei Papi, o Fumone).</span><span data-lang="en">Tour of ancient fortresses and medieval
-                    villages (e.g. Anagni, the city of Popes, or Fumone).</span></li>
-                <li><span data-lang="it">Scoperta dell'Antica Via Latina e delle mozzafiato rovine romane (es.
-                    l'Anfiteatro e il Teatro di Cassino Romana).</span><span data-lang="en">Discovery of the Ancient Via
-                    Latina and breathtaking Roman ruins (e.g. the Amphitheatre and Theatre of Roman Cassino).</span>
-                </li>
-                <li><span data-lang="it">Visita guidata al Museo Archeologico Nazionale con reperti
-                    esclusivi.</span><span data-lang="en">Guided tour of the National Archaeological Museum showcasing
-                    exclusive artifacts.</span></li>
-                <li><span data-lang="it">I "Luoghi della Memoria": visita ai cimiteri militari e ricostruzione della
-                    cruenta Battaglia di Montecassino.</span><span data-lang="en">The "Places of Memory": visit to
-                    military cemeteries and historical reconstruction of the Battle of Monte Cassino.</span></li>
-              </ul>
-            </div>
-            <a href="mailto:luisanna.v@gmail.com" class="modal-btn">
-              <span data-lang="it">Richiedi Preventivo</span><span data-lang="en">Request a Quote</span>
-            </a>
-          </div>
-        </dialog>
-
-        <!-- Religioso -->
-        <div class="tour-card" onclick="document.getElementById('modal-religion').showModal()">
-          <img src="montecassino.png" class="tour-card-img" alt="Tour religioso Abbazia Montecassino" />
-          <div class="tour-card-body">
-            <span class="tour-icon">⛪</span>
-            <h3>
-              <span data-lang="it">Tour Religioso</span>
-              <span data-lang="en">Religious Tour</span>
-            </h3>
-            <p>
-              <span data-lang="it">L'Abbazia di Montecassino, i santuari, le chiese romaniche nascoste nei borghi.
-                Clicca per il programma.</span>
-              <span data-lang="en">The Abbey of Monte Cassino, shrines, Romanesque churches hidden in the villages.
-                Click for itinerary.</span>
-            </p>
-            <span class="tour-tag">
-              <span data-lang="it">Scopri di più ➔</span>
-              <span data-lang="en">Learn more ➔</span>
-            </span>
-          </div>
-        </div>
-        <dialog id="modal-religion" class="tour-modal">
-          <div class="modal-content">
-            <button class="close-btn" onclick="document.getElementById('modal-religion').close()">&times;</button>
-            <h3 class="modal-title">
-              <span data-lang="it">Programma Religioso</span>
-              <span data-lang="en">Religious Itinerary</span>
-            </h3>
-            <div class="modal-plan">
-              <ul>
-                <li><span data-lang="it">Visita guidata al maestoso complesso dell'Abbazia di Montecassino, faro della
-                    civiltà occidentale.</span><span data-lang="en">Guided tour of the majestic complex of the Abbey of
-                    Monte Cassino, beacon of Western civilization.</span></li>
-                <li><span data-lang="it">Approfondimento sulla storia della Regola Benedettina (Ora et Labora) e visita
-                    ai chiostri.</span><span data-lang="en">Insight into the history of the Benedictine Rule (Ora et
-                    Labora) and walk through the cloisters.</span></li>
-                <li><span data-lang="it">Passeggiata verso piccoli santuari nascosti e pievi romaniche incastonate nel
-                    verde boschivo.</span><span data-lang="en">Walk toward hidden small shrines and Romanesque parish
-                    churches nestled in the woods.</span></li>
-                <li><span data-lang="it">Momenti di riflessione ed esplorazione esclusiva per godere in tranquillità
-                    della profonda spiritualità dei luoghi.</span><span data-lang="en">Moments of reflection and
-                    exclusive exploration to peacefully enjoy the profound spirituality of the places.</span></li>
-              </ul>
-            </div>
-            <a href="mailto:luisanna.v@gmail.com" class="modal-btn">
-              <span data-lang="it">Richiedi Preventivo</span><span data-lang="en">Request a Quote</span>
-            </a>
-          </div>
-        </dialog>
+      
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">
+          <span data-lang="it">Tutti</span><span data-lang="en">All</span>
+        </button>
+        <button class="filter-btn" data-filter="culturali">
+          <span data-lang="it">Culturali</span><span data-lang="en">Cultural</span>
+        </button>
+        <button class="filter-btn" data-filter="trekking">
+          Trekking
+        </button>
+        <button class="filter-btn" data-filter="bici">
+          <span data-lang="it">Bici</span><span data-lang="en">Bike</span>
+        </button>
+        <button class="filter-btn" data-filter="esperienze">
+          <span data-lang="it">Esperienze</span><span data-lang="en">Experiences</span>
+        </button>
+        <button class="filter-btn" data-filter="cammini">
+          <span data-lang="it">Cammini</span><span data-lang="en">Walks</span>
+        </button>
       </div>
+
+      <div class="tours-grid" id="tours-grid-container">
+        
+        <a href="tour-battaglia-di-cassino.html" class="tour-card" data-filter="culturali" style="text-decoration:none; display:block; color:inherit;">
+          <img src="01_tour-culturali/montecassino-abbazia.jpg" class="tour-card-img" alt="La Battaglia di Cassino — Battlefield & Abbazia" />
+          <div class="tour-card-body">
+            <h3 style="margin-top:10px; font-size:1.3rem;">
+              <span data-lang="it">La Battaglia di Cassino — Battlefield & Abbazia</span>
+              <span data-lang="en">The Battle of Cassino — Battlefield & Abbey</span>
+            </h3>
+            <p style="margin-bottom:15px; font-size:0.9rem;">
+              <span data-lang="it">Il tour più completo sulla Seconda Guerra Mondiale in Italia. Dall'Historiale di Cassino all'Abbazia di Montec...</span>
+              <span data-lang="en">The most comprehensive WWII tour in Italy. From the Cassino Historiale to the Montecassino Abbey, through the ...</span>
+            </p>
+            <div class="tour-tag">
+              <span data-lang="it">Scopri di più ➔</span>
+              <span data-lang="en">Learn more ➔</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="tour-ciociaria-cinema.html" class="tour-card" data-filter="culturali" style="text-decoration:none; display:block; color:inherit;">
+          <img src="01_tour-culturali/ciociaria-paesaggio.jpg" class="tour-card-img" alt="Ciociaria e il Cinema — Luoghi del Neorealismo" />
+          <div class="tour-card-body">
+            <h3 style="margin-top:10px; font-size:1.3rem;">
+              <span data-lang="it">Ciociaria e il Cinema — Luoghi del Neorealismo</span>
+              <span data-lang="en">Ciociaria and Cinema — Neorealism Locations</span>
+            </h3>
+            <p style="margin-bottom:15px; font-size:0.9rem;">
+              <span data-lang="it">Case natali di Nino Manfredi e Marcello Mastroianni, i paesaggi del film 'La Ciociara' di Vittorio De Sica con...</span>
+              <span data-lang="en">Birthplaces of Nino Manfredi and Marcello Mastroianni, the landscapes of Vittorio De Sica's film 'Two Women' s...</span>
+            </p>
+            <div class="tour-tag">
+              <span data-lang="it">Scopri di più ➔</span>
+              <span data-lang="en">Learn more ➔</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="tour-picinisco-trekking.html" class="tour-card" data-filter="trekking" style="text-decoration:none; display:block; color:inherit;">
+          <img src="02_trekking-val-di-comino/val-di-comino-montagna.jpg" class="tour-card-img" alt="Picinisco & Val di Comino — Tra Borghi e Sapori" />
+          <div class="tour-card-body">
+            <h3 style="margin-top:10px; font-size:1.3rem;">
+              <span data-lang="it">Picinisco & Val di Comino — Tra Borghi e Sapori</span>
+              <span data-lang="en">Picinisco & Val di Comino — Villages and Flavours</span>
+            </h3>
+            <p style="margin-bottom:15px; font-size:0.9rem;">
+              <span data-lang="it">Un percorso a piedi tra natura selvaggia, il borgo medievale di Picinisco e una sosta irresistibile per formag...</span>
+              <span data-lang="en">A walking route through wild nature, the medieval village of Picinisco, and an irresistible stop for PDO chees...</span>
+            </p>
+            <div class="tour-tag">
+              <span data-lang="it">Scopri di più ➔</span>
+              <span data-lang="en">Learn more ➔</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="tour-via-del-rapido.html" class="tour-card" data-filter="bici" style="text-decoration:none; display:block; color:inherit;">
+          <img src="03_tour-bici/bici-01-via-del-rapido-fiume.jpg" class="tour-card-img" alt="La Via del Rapido — Cassino Riverside" />
+          <div class="tour-card-body">
+            <h3 style="margin-top:10px; font-size:1.3rem;">
+              <span data-lang="it">La Via del Rapido — Cassino Riverside</span>
+              <span data-lang="en">The Rapido Way — Cassino Riverside</span>
+            </h3>
+            <p style="margin-bottom:15px; font-size:0.9rem;">
+              <span data-lang="it">Percorso lungo il fiume Rapido da Cassino fino a Sant'Elia. Panorami fluviali, sosta al monastero di Sant'Onof...</span>
+              <span data-lang="en">Route along the Rapido river from Cassino to Sant'Elia. River views, stop at the Sant'Onofrio monastery. Ideal...</span>
+            </p>
+            <div class="tour-tag">
+              <span data-lang="it">Scopri di più ➔</span>
+              <span data-lang="en">Learn more ➔</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="tour-salita-abbazia.html" class="tour-card" data-filter="bici" style="text-decoration:none; display:block; color:inherit;">
+          <img src="03_tour-bici/bici-02-salita-abbazia-montagna.jpg" class="tour-card-img" alt="Salita all'Abbazia — Il Colle dei Diavoli Verdi" />
+          <div class="tour-card-body">
+            <h3 style="margin-top:10px; font-size:1.3rem;">
+              <span data-lang="it">Salita all'Abbazia — Il Colle dei Diavoli Verdi</span>
+              <span data-lang="en">Abbey Climb — The Green Devils Hill</span>
+            </h3>
+            <p style="margin-bottom:15px; font-size:0.9rem;">
+              <span data-lang="it">Da Cassino all'Abbazia lungo la strada storica. Sosta al Cimitero Polacco e carro Sherman. Discesa libera con ...</span>
+              <span data-lang="en">From Cassino to the Abbey along the historic road. Stop at the Polish Cemetery and Sherman tank. Freeride desc...</span>
+            </p>
+            <div class="tour-tag">
+              <span data-lang="it">Scopri di più ➔</span>
+              <span data-lang="en">Learn more ➔</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="tour-linea-gustav.html" class="tour-card" data-filter="bici" style="text-decoration:none; display:block; color:inherit;">
+          <img src="03_tour-bici/bici-03-linea-gustav-mtb-bosco.jpg" class="tour-card-img" alt="Linea Gustav in MTB — Bunker e Sentieri" />
+          <div class="tour-card-body">
+            <h3 style="margin-top:10px; font-size:1.3rem;">
+              <span data-lang="it">Linea Gustav in MTB — Bunker e Sentieri</span>
+              <span data-lang="en">Gustav Line in MTB — Bunkers & Trails</span>
+            </h3>
+            <p style="margin-bottom:15px; font-size:0.9rem;">
+              <span data-lang="it">Sui crinali della Linea Gustav con guida storica WWII in bici. Sentieri militari e bunker originali tra i bosc...</span>
+              <span data-lang="en">On the Gustav Line ridges with a WWII historian guide on bike. Military trails and original bunkers in the woo...</span>
+            </p>
+            <div class="tour-tag">
+              <span data-lang="it">Scopri di più ➔</span>
+              <span data-lang="en">Learn more ➔</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="tour-via-latina.html" class="tour-card" data-filter="bici" style="text-decoration:none; display:block; color:inherit;">
+          <img src="03_tour-bici/bici-04-via-latina-campagna.jpg" class="tour-card-img" alt="Via Latina in Bici — Da Aquino a Cassino" />
+          <div class="tour-card-body">
+            <h3 style="margin-top:10px; font-size:1.3rem;">
+              <span data-lang="it">Via Latina in Bici — Da Aquino a Cassino</span>
+              <span data-lang="en">Via Latina by Bike — Aquino to Cassino</span>
+            </h3>
+            <p style="margin-bottom:15px; font-size:0.9rem;">
+              <span data-lang="it">Via Latina romana tra Aquinum, Casinum e l'anfiteatro romano. Pianeggiante, adatto a famiglie. Tappa enogastro...</span>
+              <span data-lang="en">Roman Via Latina between Aquinum, Casinum, and the Roman amphitheatre. Flat, family-friendly. Food & wine stop...</span>
+            </p>
+            <div class="tour-tag">
+              <span data-lang="it">Scopri di più ➔</span>
+              <span data-lang="en">Learn more ➔</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="tour-anello-vettese.html" class="tour-card" data-filter="bici" style="text-decoration:none; display:block; color:inherit;">
+          <img src="03_tour-bici/bici-05-anello-vettese-mtb-trail.jpg" class="tour-card-img" alt="Anello di Vettese — MTB Avanzata" />
+          <div class="tour-card-body">
+            <h3 style="margin-top:10px; font-size:1.3rem;">
+              <span data-lang="it">Anello di Vettese — MTB Avanzata</span>
+              <span data-lang="en">Vettese Loop — Advanced MTB</span>
+            </h3>
+            <p style="margin-bottom:15px; font-size:0.9rem;">
+              <span data-lang="it">Circuito tecnico da Vettese con fondo misto, 1.100 m di dislivello. Paesaggi selvaggi e borghi fantasma della ...</span>
+              <span data-lang="en">Technical loop from Vettese with mixed terrain, 1,100 m elevation gain. Wild landscapes and ghost villages of ...</span>
+            </p>
+            <div class="tour-tag">
+              <span data-lang="it">Scopri di più ➔</span>
+              <span data-lang="en">Learn more ➔</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="tour-bikepacking-gaeta.html" class="tour-card" data-filter="bici" style="text-decoration:none; display:block; color:inherit;">
+          <img src="03_tour-bici/bici-06-cassino-gaeta-mare.jpg" class="tour-card-img" alt="Cassino → Gaeta in 3 Giorni — Bikepacking" />
+          <div class="tour-card-body">
+            <h3 style="margin-top:10px; font-size:1.3rem;">
+              <span data-lang="it">Cassino → Gaeta in 3 Giorni — Bikepacking</span>
+              <span data-lang="en">Cassino → Gaeta in 3 Days — Bikepacking</span>
+            </h3>
+            <p style="margin-bottom:15px; font-size:0.9rem;">
+              <span data-lang="it">Dalla sorgente del Gari alla Montagna Spaccata. 3 tappe con pernottamenti, luggage transfer e assistenza mecca...</span>
+              <span data-lang="en">From the Gari spring to Montagna Spaccata. 3 stages with overnight stays, luggage transfer, and mechanical sup...</span>
+            </p>
+            <div class="tour-tag">
+              <span data-lang="it">Scopri di più ➔</span>
+              <span data-lang="en">Learn more ➔</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="tour-cooking-class.html" class="tour-card" data-filter="esperienze" style="text-decoration:none; display:block; color:inherit;">
+          <img src="04_esperienze/exp-01-cooking-class-pasta-fresca.jpg" class="tour-card-img" alt="Cooking Class — Pasta Fresca alla Fattoria" />
+          <div class="tour-card-body">
+            <h3 style="margin-top:10px; font-size:1.3rem;">
+              <span data-lang="it">Cooking Class — Pasta Fresca alla Fattoria</span>
+              <span data-lang="en">Cooking Class — Fresh Pasta at the Farm</span>
+            </h3>
+            <p style="margin-bottom:15px; font-size:0.9rem;">
+              <span data-lang="it">Laboratorio di cucina genuina alla Fattoria di Nonno Peppe. Si impara la pasta fresca locale e segue degustazi...</span>
+              <span data-lang="en">Authentic cooking workshop at Nonno Peppe's Farm. Learn local fresh pasta making, followed by a tasting of you...</span>
+            </p>
+            <div class="tour-tag">
+              <span data-lang="it">Scopri di più ➔</span>
+              <span data-lang="en">Learn more ➔</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="tour-orso-marsicano.html" class="tour-card" data-filter="esperienze" style="text-decoration:none; display:block; color:inherit;">
+          <img src="04_esperienze/exp-02-orso-marsicano-campoli.jpg" class="tour-card-img" alt="Area Faunistica dell'Orso — Campoli Appennino" />
+          <div class="tour-card-body">
+            <h3 style="margin-top:10px; font-size:1.3rem;">
+              <span data-lang="it">Area Faunistica dell'Orso — Campoli Appennino</span>
+              <span data-lang="en">Bear Wildlife Area — Campoli Appennino</span>
+            </h3>
+            <p style="margin-bottom:15px; font-size:0.9rem;">
+              <span data-lang="it">Ammirare gli orsi marsicani in un'area protetta, in totale sicurezza. Emozione per grandi e bambini. Solo nei ...</span>
+              <span data-lang="en">Admire the Marsican bears in a protected area, in complete safety. A thrill for adults and children. Only duri...</span>
+            </p>
+            <div class="tour-tag">
+              <span data-lang="it">Scopri di più ➔</span>
+              <span data-lang="en">Learn more ➔</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="tour-aperitivo-aquino.html" class="tour-card" data-filter="esperienze" style="text-decoration:none; display:block; color:inherit;">
+          <img src="04_esperienze/exp-03-aperitivo-aquino-rovine.jpg" class="tour-card-img" alt="Aperitivo nelle Aree Archeologiche di Aquino" />
+          <div class="tour-card-body">
+            <h3 style="margin-top:10px; font-size:1.3rem;">
+              <span data-lang="it">Aperitivo nelle Aree Archeologiche di Aquino</span>
+              <span data-lang="en">Aperitivo in the Archaeological Areas of Aquino</span>
+            </h3>
+            <p style="margin-bottom:15px; font-size:0.9rem;">
+              <span data-lang="it">Aperitivo serale tra le rovine di Aquinum. Un longa bar tra le pietre antiche, musica live e guida storica. Il...</span>
+              <span data-lang="en">Evening aperitivo among the ruins of Aquinum. A long bar set among ancient stones, live music, and a historica...</span>
+            </p>
+            <div class="tour-tag">
+              <span data-lang="it">Scopri di più ➔</span>
+              <span data-lang="en">Learn more ➔</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="tour-pittura-sorgente.html" class="tour-card" data-filter="esperienze" style="text-decoration:none; display:block; color:inherit;">
+          <img src="04_esperienze/exp-04-pittura-sorgente-san-giorgio-liri.jpg" class="tour-card-img" alt="Pittura all'Aria Aperta — Sorgente San Giorgio" />
+          <div class="tour-card-body">
+            <h3 style="margin-top:10px; font-size:1.3rem;">
+              <span data-lang="it">Pittura all'Aria Aperta — Sorgente San Giorgio</span>
+              <span data-lang="en">Plein Air Painting — San Giorgio Spring</span>
+            </h3>
+            <p style="margin-bottom:15px; font-size:0.9rem;">
+              <span data-lang="it">Sessione en plein air presso la Sorgente di San Giorgio a Liri: acque cristalline e natura. Un pittore locale ...</span>
+              <span data-lang="en">En plein air session at the San Giorgio spring in Liri: crystal waters and nature. A local painter will guide ...</span>
+            </p>
+            <div class="tour-tag">
+              <span data-lang="it">Scopri di più ➔</span>
+              <span data-lang="en">Learn more ➔</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="tour-fotografia-cervi.html" class="tour-card" data-filter="esperienze" style="text-decoration:none; display:block; color:inherit;">
+          <img src="04_esperienze/exp-05-fotografia-cervi-villetta-barrea.jpg" class="tour-card-img" alt="Fotografia Naturalistica — Cervi a Villetta Barrea" />
+          <div class="tour-card-body">
+            <h3 style="margin-top:10px; font-size:1.3rem;">
+              <span data-lang="it">Fotografia Naturalistica — Cervi a Villetta Barrea</span>
+              <span data-lang="en">Nature Photography — Deer in Villetta Barrea</span>
+            </h3>
+            <p style="margin-bottom:15px; font-size:0.9rem;">
+              <span data-lang="it">Escursione a Villetta Barrea. Nei periodi giusti è possibile fotografare i cervi in libertà e i caprioli. Con ...</span>
+              <span data-lang="en">Excursion to Villetta Barrea. In the right periods, you can photograph wild deer and roe deer. With a naturali...</span>
+            </p>
+            <div class="tour-tag">
+              <span data-lang="it">Scopri di più ➔</span>
+              <span data-lang="en">Learn more ➔</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="tour-cammino-san-benedetto.html" class="tour-card" data-filter="cammini" style="text-decoration:none; display:block; color:inherit;">
+          <img src="05_cammini-religiosi/cammino-01-san-benedetto-norcia.jpg" class="tour-card-img" alt="Il Cammino di San Benedetto" />
+          <div class="tour-card-body">
+            <h3 style="margin-top:10px; font-size:1.3rem;">
+              <span data-lang="it">Il Cammino di San Benedetto</span>
+              <span data-lang="en">The Way of Saint Benedict</span>
+            </h3>
+            <p style="margin-bottom:15px; font-size:0.9rem;">
+              <span data-lang="it">Ripercorre le tappe della vita del Santo. Uno dei cammini spirituali più significativi d'Europa, tra boschi e ...</span>
+              <span data-lang="en">Retraces the stages of the Saint's life. One of the most significant spiritual paths in Europe, through woods ...</span>
+            </p>
+            <div class="tour-tag">
+              <span data-lang="it">Scopri di più ➔</span>
+              <span data-lang="en">Learn more ➔</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="tour-cammino-san-filippo.html" class="tour-card" data-filter="cammini" style="text-decoration:none; display:block; color:inherit;">
+          <img src="05_cammini-religiosi/cammino-02-san-filippo-neri-gaeta.jpg" class="tour-card-img" alt="Il Cammino di San Filippo Neri" />
+          <div class="tour-card-body">
+            <h3 style="margin-top:10px; font-size:1.3rem;">
+              <span data-lang="it">Il Cammino di San Filippo Neri</span>
+              <span data-lang="en">The Way of Saint Philip Neri</span>
+            </h3>
+            <p style="margin-bottom:15px; font-size:0.9rem;">
+              <span data-lang="it">Da Cassino a Gaeta attraverso Esperia e Itri. Un itinerario che dal monte scende al mare per terminare alla su...</span>
+              <span data-lang="en">From Cassino to Gaeta through Esperia and Itri. An itinerary that descends from the mountain to the sea, endin...</span>
+            </p>
+            <div class="tour-tag">
+              <span data-lang="it">Scopri di più ➔</span>
+              <span data-lang="en">Learn more ➔</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="tour-cammino-sant-antonio.html" class="tour-card" data-filter="cammini" style="text-decoration:none; display:block; color:inherit;">
+          <img src="05_cammini-religiosi/cammino-03-santantonio-pellegrino-bosco.jpg" class="tour-card-img" alt="Il Cammino di Sant'Antonio" />
+          <div class="tour-card-body">
+            <h3 style="margin-top:10px; font-size:1.3rem;">
+              <span data-lang="it">Il Cammino di Sant'Antonio</span>
+              <span data-lang="en">The Way of Saint Anthony</span>
+            </h3>
+            <p style="margin-bottom:15px; font-size:0.9rem;">
+              <span data-lang="it">Un percorso francescano attraverso la Ciociaria e la Marsica, fra eremi e santuari rupestri, per ritrovare spi...</span>
+              <span data-lang="en">A Franciscan path through Ciociaria and Marsica, among hermitages and rock sanctuaries, to rediscover pure and...</span>
+            </p>
+            <div class="tour-tag">
+              <span data-lang="it">Scopri di più ➔</span>
+              <span data-lang="en">Learn more ➔</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ TRAVEL DESIGN ══════════════════════════════════ -->
+  <section class="travel-design" id="travel-design" style="background:#fff; padding:90px 24px;">
+    <div class="section-inner" style="text-align:center;">
+      <p class="section-label">
+        <span data-lang="it">Travel Design</span>
+        <span data-lang="en">Travel Design</span>
+      </p>
+      <h2 class="section-title">
+        <span data-lang="it">Crea il Tuo Tour su Misura</span>
+        <span data-lang="en">Create Your Tailored Tour</span>
+      </h2>
+      <p class="section-desc" style="margin: 0 auto 40px; max-width:700px;">
+        <span data-lang="it">Raccontami di te, dei tuoi interessi e dei tuoi compagni di viaggio. Progetterò un itinerario unico, studiato appositamente per le tue esigenze, senza alcun impegno.</span>
+        <span data-lang="en">Tell me about yourself, your interests, and your travel companions. I will design a unique itinerary, specifically tailored to your needs, with no obligation.</span>
+      </p>
+      <img src="06_travel-design/travel-design-itinerario-su-misura.jpg" alt="Travel Design" style="width:100%; max-width:900px; border-radius:18px; margin-bottom:50px; object-fit:cover; height:400px; box-shadow:0 20px 50px rgba(0,0,0,0.15);" />
+      
+      <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:24px; margin-bottom:50px;">
+         <div style="background:var(--cream); padding:30px; border-radius:16px; width:240px; text-align:left; box-shadow:0 4px 15px rgba(0,0,0,0.03);">
+            <b style="color:var(--gold); font-size:1.5rem; font-family:'Cormorant Garamond', serif;">01</b><br>
+            <strong style="margin:10px 0; display:block; font-size:1.1rem; color:var(--dark);"><span data-lang="it">Raccontami di te</span><span data-lang="en">Tell me about you</span></strong>
+            <span style="font-size:0.85rem; color:var(--muted);"><span data-lang="it">Scrivi via email: chi sei, cosa ti interessa e quanto tempo hai.</span><span data-lang="en">Write via email: who you are, interests and time available.</span></span>
+         </div>
+         <div style="background:var(--cream); padding:30px; border-radius:16px; width:240px; text-align:left; box-shadow:0 4px 15px rgba(0,0,0,0.03);">
+            <b style="color:var(--gold); font-size:1.5rem; font-family:'Cormorant Garamond', serif;">02</b><br>
+            <strong style="margin:10px 0; display:block; font-size:1.1rem; color:var(--dark);"><span data-lang="it">Progetto il tour</span><span data-lang="en">I design the tour</span></strong>
+            <span style="font-size:0.85rem; color:var(--muted);"><span data-lang="it">Ricevi una proposta personalizzata con tappe ed esperienze.</span><span data-lang="en">Receive a custom proposal with spots and experiences.</span></span>
+         </div>
+         <div style="background:var(--cream); padding:30px; border-radius:16px; width:240px; text-align:left; box-shadow:0 4px 15px rgba(0,0,0,0.03);">
+            <b style="color:var(--gold); font-size:1.5rem; font-family:'Cormorant Garamond', serif;">03</b><br>
+            <strong style="margin:10px 0; display:block; font-size:1.1rem; color:var(--dark);"><span data-lang="it">Raffiniamo insieme</span><span data-lang="en">We refine together</span></strong>
+            <span style="font-size:0.85rem; color:var(--muted);"><span data-lang="it">Ci confrontiamo e aggiustiamo i dettagli finché non è perfetto.</span><span data-lang="en">We talk and adjust details until it's perfect.</span></span>
+         </div>
+         <div style="background:var(--cream); padding:30px; border-radius:16px; width:240px; text-align:left; box-shadow:0 4px 15px rgba(0,0,0,0.03);">
+            <b style="color:var(--gold); font-size:1.5rem; font-family:'Cormorant Garamond', serif;">04</b><br>
+            <strong style="margin:10px 0; display:block; font-size:1.1rem; color:var(--dark);"><span data-lang="it">Parti e vivi</span><span data-lang="en">Go and experience</span></strong>
+            <span style="font-size:0.85rem; color:var(--muted);"><span data-lang="it">Il giorno del tour Luisanna è con te, passo dopo passo.</span><span data-lang="en">On tour day, Luisanna is with you, step by step.</span></span>
+         </div>
+      </div>
+      
+      <a href="https://wa.me/393489128901" style="display:inline-flex; align-items:center; gap:10px; background:#25D366; color:#fff; padding:18px 40px; border-radius:50px; text-decoration:none; font-weight:700; font-size:0.95rem; text-transform:uppercase; letter-spacing:0.05em; transition:0.3s; box-shadow:0 8px 24px rgba(37,211,102,0.3);">
+         <span data-lang="it">Contattami su WhatsApp</span><span data-lang="en">Contact me on WhatsApp</span>
+      </a>
     </div>
   </section>
 
@@ -1180,7 +1383,26 @@
         if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
       });
     });
-  </script>
+  
+    // Filter logic
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.getAttribute('data-filter');
+        document.querySelectorAll('.tour-card').forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-filter') === filter) {
+             card.style.display = 'block';
+             setTimeout(() => { card.style.opacity = '1'; card.style.transform = 'translateY(0)'; }, 50);
+          } else {
+             card.style.opacity = '0';
+             card.style.transform = 'translateY(10px)';
+             setTimeout(() => card.style.display = 'none', 400);
+          }
+        });
+      });
+    });
+\n  </script>
 </body>
 
 </html>
