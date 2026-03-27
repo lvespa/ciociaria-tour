@@ -433,6 +433,21 @@
       border-radius: 20px;
     }
 
+    .tour-category-label {
+      display: inline-block;
+      margin-top: 10px;
+      margin-left: 0;
+      background: rgba(58, 31, 10, 0.07);
+      color: var(--muted);
+      border: 1px solid rgba(58, 31, 10, 0.12);
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
     /* ─── HIGHLIGHTS ────────────────────────────────── */
     .highlights {
       background: #f3eddf;
@@ -1375,6 +1390,30 @@
 
     // Init Italian
     setLang('it');
+
+    // Add category labels to tour cards
+    const categoryLabels = {
+      culturali: { it: 'Culturale', en: 'Cultural' },
+      trekking:  { it: 'Trekking', en: 'Trekking' },
+      bici:      { it: 'Bici', en: 'Bike' },
+      esperienze:{ it: 'Esperienza', en: 'Experience' },
+      cammini:   { it: 'Cammino', en: 'Walk' }
+    };
+    document.querySelectorAll('.tour-card').forEach(card => {
+      const cat = card.getAttribute('data-filter');
+      const label = categoryLabels[cat];
+      if (label) {
+        const tag = card.querySelector('.tour-tag');
+        if (tag) {
+          const span = document.createElement('span');
+          span.className = 'tour-category-label';
+          span.innerHTML = '<span data-lang="it">' + label.it + '</span><span data-lang="en">' + label.en + '</span>';
+          tag.insertAdjacentElement('afterend', document.createElement('br'));
+          tag.nextElementSibling.insertAdjacentElement('afterend', span);
+        }
+      }
+    });
+    setLang(document.documentElement.getAttribute('lang') || 'it');
 
     // Smooth scroll for hero CTA
     document.querySelectorAll('a[href^="#"]').forEach(a => {
