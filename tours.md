@@ -1,4 +1,8 @@
 # Luisanna Vespa — Tour & Esperienze
+> **Nota sulle Traduzioni e i Pacchetti:** 
+> - Tutte le descrizioni e gli itinerari qui presenti sono stati **completamente tradotti in lingua Inglese** nei file `.html` finali generati dal sistema.
+> - Si precisa che in conformità alle nuove disposizioni, le esperienze includono **solo il servizio di guida/accompagnamento**. Eventuali pacchetti con ristoranti, aperitivi e degustazioni sono stati estromessi dall'offerta base.
+
 ### Accompagnatrice Turistica Abilitata · Ciociaria · Cassino · Lazio
 **Email:** luisanna.v@gmail.com · **WhatsApp:** +39 348 912 8901
 
@@ -41,7 +45,7 @@ Il tour più completo sulla Seconda Guerra Mondiale in Italia. Dall'Historiale d
 - Cimitero Polacco · Hill 593 · Monumento 3ª Divisione Carpatica
 - Cimitero del Commonwealth e Cimitero Americano
 - Rovine di San Pietro Infine — Parco della Memoria
-- Pranzo in agriturismo locale incluso
+- Conclusione del tour guidato
 
 **Contatto:** [luisanna.v@gmail.com](mailto:luisanna.v@gmail.com)
 
@@ -69,7 +73,7 @@ Case natali di Nino Manfredi (Castro dei Volsci) e Marcello Mastroianni (Fontana
 - Fontana Liri — luoghi di Marcello Mastroianni
 - Paesaggi "La Ciociara" di Vittorio De Sica
 - Proiezione scene originali in sala storica
-- Aperitivo con prodotti tipici locali
+- Passeggiata tra i resti antichi
 
 **Contatto:** [luisanna.v@gmail.com](mailto:luisanna.v@gmail.com)
 
@@ -95,7 +99,7 @@ Case natali di Nino Manfredi (Castro dei Volsci) e Marcello Mastroianni (Fontana
 | Prezzo | da **€45 / persona** (degustazione inclusa) |
 
 **Descrizione**
-Un percorso a piedi di circa 2 ore tra natura selvaggia, il borgo medievale di Picinisco e una sosta irresistibile per formaggi DOP e vino locale. Adatto a famiglie. Scarpe da trekking consigliate.
+Un percorso a piedi di circa 2 ore tra natura selvaggia, il borgo medievale di Picinisco e per godere di meravigliosi panorami sui monti appenninici. Adatto a famiglie. Scarpe da trekking consigliate.
 
 **Programma in 5 tappe**
 
@@ -108,8 +112,8 @@ Percorso segnato tra prati aperti, ruscelli cristallini e faggeta. La guida racc
 **Tappa 3 — Picinisco, borgo medievale a 825 m s.l.m.**
 Viuzze lastricate, torre normanna, case in pietra intatte. Visita guidata del centro storico con racconti di tradizioni locali e vista sulle vette del Parco Nazionale.
 
-**Tappa 4 — Degustazione: Pecorino di Picinisco DOP e Vino DOC Atina**
-Sosta in azienda agricola locale. Pecorino stagionato e scamosciato, ricotta fresca, caciotta di capra. Vino DOC Atina Cabernet. Pane casereccio, salumi e olio EVO della Valle.
+**Tappa 4 — Arrivo al belvedere panoramico**
+Pausa contemplativa e ritorno.
 
 **Tappa 5 — Rientro e acquisto dal produttore**
 Rientro al punto di partenza con possibilità di acquistare direttamente i prodotti dell'azienda agricola.
@@ -158,7 +162,7 @@ Da Cassino all'Abbazia di Montecassino lungo la strada storica panoramica. Sosta
 
 ---
 
-### 3.3 Linea Gustav in MTB — Bunker e Sentieri 🟡
+### 3.3 Linea Gustav a Piedi — Bunker e Sentieri 🟡
 
 **Immagine:** `03_tour-bici/bici-03-linea-gustav-mtb-bosco.jpg`
 
@@ -170,7 +174,7 @@ Da Cassino all'Abbazia di Montecassino lungo la strada storica panoramica. Sosta
 | Dislivello | +680 m |
 | Durata | 4 h |
 
-Sui crinali della Linea Gustav con guida storica WWII in bici. Sentieri militari e bunker originali tra i boschi. Tour unico in Italia, disponibile in inglese.
+Sui crinali della Linea Gustav con guida storica WWII a piedi. Sentieri militari e bunker originali tra i boschi. Tour unico in Italia, disponibile in inglese.
 
 ---
 
@@ -186,7 +190,7 @@ Sui crinali della Linea Gustav con guida storica WWII in bici. Sentieri militari
 | Dislivello | +210 m |
 | Durata | 3.5 h |
 
-Via Latina romana tra Aquinum, Casinum e l'anfiteatro romano. Pianeggiante, adatto a famiglie. Tappa enogastronomica ad Aquino inclusa.
+Via Latina romana tra Aquinum, Casinum e l'anfiteatro romano. Pianeggiante, adatto a famiglie. Servizio cicloturistico alle rovine.
 
 ---
 
@@ -229,14 +233,14 @@ Dalla sorgente del Gari alla Montagna Spaccata di Gaeta. 3 tappe con pernottamen
 
 ---
 
-### 4.1 Cooking Class — Pasta Fresca alla Fattoria di Nonno Peppe 🍝
+### 4.1 Assistenza in Fattoria — Laboratorio Locale 🍝
 
 > **Esclusiva** · Pontecorvese
 
 **Immagine:** `04_esperienze/exp-01-cooking-class-pasta-fresca.jpg`
 
 **Descrizione**
-Laboratorio di cucina autentica presso la **Fattoria di Nonno Peppe** nella zona del Pontecorvese. Si impara la pasta fresca locale: fettuccine, maccaroni al ferretto e sagne 'mpastare. Segue una degustazione enogastronomica con i piatti preparati, vino locale e prodotti del territorio. Disponibile in italiano e inglese.
+Servizio di accompagnamento e interpretariato per le tue esperienze in fattoria con laboratori locali. (N.B. L'offerta comprende esclusivamente il servizio della guida). Disponibile in italiano e inglese.
 
 > ⚠️ **Prenotazione obbligatoria · Gruppi 4–12 persone · IT & EN**
 
@@ -259,14 +263,14 @@ Visita all'**Area Faunistica dell'Orso di Campoli Appennino**, dove è possibile
 
 ---
 
-### 4.3 Aperitivo nelle Aree Archeologiche di Aquino 🏺
+### 4.3 Visita Serale Archeologica — Aquinum 🏺
 
 > **Novità** · Serale
 
 **Immagine:** `04_esperienze/exp-03-aperitivo-aquino-rovine.jpg`
 
 **Descrizione**
-Aperitivo serale tra le rovine romane di **Aquinum** (patria del poeta Giovenale): musica dal vivo, un longa bar allestito tra le pietre antiche e una guida storica a disposizione. Il tramonto sulle rovine e un calice di vino locale rendono questo momento davvero unico.
+Un'avventura al tramonto per esplorare e scoprire la magia delle rovine di Aquinum. L'esperienza base include l'accompagnamento nell'area. Su richiesta, è possibile arricchire la serata prenotando separatamente una visita con la nostra Guida Storica partner (costo extra) o un'esclusiva esperienza con musica dal vivo.
 
 > ⚠️ **Prenotazione obbligatoria · Gruppi privati o eventi · Solo la sera**
 
@@ -318,8 +322,8 @@ Escursione fotografica a **Villetta Barrea** (Parco Nazionale d'Abruzzo), a circ
 |---|---|
 | Lunghezza | ~300 km |
 | Durata | 14–18 giorni |
-| Partenza | Norcia (PG) |
-| Arrivo | Abbazia di Montecassino |
+| Partenza | Cassino |
+| Arrivo | Norcia (PG) |
 | Lingue | Italiano · Inglese |
 
 **Descrizione**
