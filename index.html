@@ -766,6 +766,74 @@
     .tour-card {
       transition: opacity 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
     }
+\n  
+    /* ─── PARTNERS ──────────────────────────────────── */
+    .partners-section {
+      background: var(--cream);
+      padding: 90px 24px;
+    }
+    .partners-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+    .partner-card {
+      background: #fff;
+      padding: 40px 30px;
+      border-radius: 18px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      cursor: default;
+      position: relative;
+      overflow: hidden;
+    }
+    .partner-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+      transform-origin: left;
+    }
+    .partner-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    }
+    .partner-card:hover::before {
+      transform: scaleX(1);
+    }
+    .partner-icon {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      display: inline-block;
+      transition: transform 0.4s ease;
+    }
+    .partner-card:hover .partner-icon {
+      transform: scale(1.15) rotate(5deg);
+    }
+    .partner-title {
+      margin: 10px 0;
+      display: block;
+      font-size: 1.35rem;
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--dark);
+      font-weight: 700;
+    }
+    .partner-desc {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .partner-special {
+      border: 1px solid rgba(201, 168, 76, 0.4);
+      background: linear-gradient(to bottom, #fff, #faf6ef);
+    }
 \n  </style>
 </head>
 
@@ -1352,8 +1420,8 @@
   </section>
 
   
-  <!-- ══ PARTNERS ═══════════════════════════════════════ -->
-  <section class="partners" id="partners" style="background:var(--cream); padding:90px 24px;">
+    <!-- ══ PARTNERS ═══════════════════════════════════════ -->
+  <section class="partners-section" id="partners">
     <div class="section-inner" style="text-align:center;">
       <p class="section-label">
         <span data-lang="it">I Miei Consigli</span>
@@ -1368,37 +1436,50 @@
         <span data-lang="en">A network of trusted professionals and facilities to make your stay in Ciociaria perfect in every way.</span>
       </p>
       
-      <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:30px; margin-bottom:20px;">
+      <div class="partners-grid">
          
          <!-- Partner 1 -->
-         <div style="background:#fff; padding:40px 30px; border-radius:18px; width:300px; text-align:center; box-shadow:0 10px 30px rgba(0,0,0,0.05); transition:transform 0.3s;">
-            <div style="font-size:3rem; margin-bottom:20px;">🚲</div>
-            <strong style="margin:10px 0; display:block; font-size:1.25rem; font-family:'Cormorant Garamond', serif; color:var(--dark);">GoAout Pontecorvo</strong>
-            <span style="font-size:0.9rem; color:var(--muted);"><span data-lang="it">Noleggio e-bike e mountain bike di alta qualità per le tue avventure.</span><span data-lang="en">High quality e-bike and mountain bike rental for your adventures.</span></span>
+         <div class="partner-card">
+            <div class="partner-icon">🚲</div>
+            <span class="partner-title">GoAout Pontecorvo</span>
+            <span class="partner-desc">
+              <span data-lang="it">Noleggio e-bike e mountain bike di alta qualità per le tue avventure.</span>
+              <span data-lang="en">High quality e-bike and mountain bike rental for your adventures.</span>
+            </span>
          </div>
          
          <!-- Partner 2 -->
-         <div style="background:#fff; padding:40px 30px; border-radius:18px; width:300px; text-align:center; box-shadow:0 10px 30px rgba(0,0,0,0.05); transition:transform 0.3s;">
-            <div style="font-size:3rem; margin-bottom:20px;">🏨</div>
-            <strong style="margin:10px 0; display:block; font-size:1.25rem; font-family:'Cormorant Garamond', serif; color:var(--dark);">Hotel della Pace, Cassino</strong>
-            <span style="font-size:0.9rem; color:var(--muted);"><span data-lang="it">Ospitalità e comfort nel cuore di Cassino, base perfetta per i tuoi tour.</span><span data-lang="en">Hospitality and comfort in the heart of Cassino, perfect base for your tours.</span></span>
+         <div class="partner-card">
+            <div class="partner-icon">🏨</div>
+            <span class="partner-title">Hotel della Pace, Cassino</span>
+            <span class="partner-desc">
+              <span data-lang="it">Ospitalità e comfort nel cuore di Cassino, base perfetta per i tuoi tour.</span>
+              <span data-lang="en">Hospitality and comfort in the heart of Cassino, perfect base for your tours.</span>
+            </span>
          </div>
          
          <!-- Partner 3 -->
-         <div style="background:#fff; padding:40px 30px; border-radius:18px; width:300px; text-align:center; box-shadow:0 10px 30px rgba(0,0,0,0.05); transition:transform 0.3s; border:2px solid var(--gold-lt);">
-            <div style="font-size:3rem; margin-bottom:20px;">🏛️</div>
-            <strong style="margin:10px 0; display:block; font-size:1.25rem; font-family:'Cormorant Garamond', serif; color:var(--dark);">
+         <div class="partner-card partner-special">
+            <div class="partner-icon">🏛️</div>
+            <span class="partner-title">
               <span data-lang="it">Guida Ufficiale</span><span data-lang="en">Official Guide</span>
-            </strong>
-            <span style="font-size:0.9rem; color:var(--muted);"><span data-lang="it">Hai bisogno di una guida ufficiale? Contatta la nostra guida ufficiale partner per riservare le tue esperienze guidate.</span><span data-lang="en">Need an official guide? Contact our official guide partner to book your guided experiences.</span></span>
-         </div>\n
+            </span>
+            <span class="partner-desc">
+              <span data-lang="it">Hai bisogno di una guida ufficiale? Contatta la nostra guida partner per riservare le tue esperienze guidate.</span>
+              <span data-lang="en">Need an official guide? Contact our official guide partner to book your guided experiences.</span>
+            </span>
+         </div>
+
          <!-- Partner 4: Assicurazione -->
-         <div style="background:#fff; padding:40px 30px; border-radius:18px; width:300px; text-align:center; box-shadow:0 10px 30px rgba(0,0,0,0.05); transition:transform 0.3s; border:2px solid rgba(201, 168, 76, 0.4);">
-            <div style="font-size:3rem; margin-bottom:20px;">🛡️</div>
-            <strong style="margin:10px 0; display:block; font-size:1.25rem; font-family:'Cormorant Garamond', serif; color:var(--dark);">
+         <div class="partner-card partner-special">
+            <div class="partner-icon">🛡️</div>
+            <span class="partner-title">
               <span data-lang="it">Assicurazione Infortuni</span><span data-lang="en">Accident Insurance</span>
-            </strong>
-            <span style="font-size:0.9rem; color:var(--muted);"><span data-lang="it">Viaggia in totale serenità. Con una piccola quota extra puoi richiedere l'attivazione di una polizza infortuni dedicata per ogni partecipante.</span><span data-lang="en">Travel with total peace of mind. For a small extra fee, you can request an accident insurance policy for each participant.</span></span>
+            </span>
+            <span class="partner-desc">
+              <span data-lang="it">Viaggia in totale serenità. Con una piccola quota extra puoi richiedere l'attivazione di una polizza infortuni dedicata per ogni partecipante.</span>
+              <span data-lang="en">Travel with total peace of mind. For a small extra fee, you can request an accident insurance policy for each participant.</span>
+            </span>
          </div>
          
       </div>
