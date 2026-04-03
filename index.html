@@ -87,6 +87,26 @@
       background: rgba(255, 255, 255, 0.25);
     }
 
+    /* ─── HERO LOGO ─────────────────────────────────── */
+    .hero-logo {
+      width: 180px;
+      height: auto;
+      margin-bottom: 24px;
+      filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.3));
+      animation: logoFadeIn 1.2s ease-out;
+    }
+
+    @keyframes logoFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
     /* ─── HERO ──────────────────────────────────────── */
     .hero {
       position: relative;
@@ -850,6 +870,7 @@
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
+      <img src="logo.png" alt="Luisanna Vespa - Accompagnatrice Turistica" class="hero-logo">
       <div class="badge">
         <span data-lang="it">Accompagnatore Turistico Locale · Lazio</span>
         <span data-lang="en">Local Licensed Tour Guide · Lazio</span>
