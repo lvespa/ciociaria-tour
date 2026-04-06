@@ -949,6 +949,58 @@
       margin-bottom: 24px;
       line-height: 1.6;
     }
+
+    /* ─── FORM ELEMENTS ─────────────────────────────── */
+    .review-form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      text-align: left;
+      margin-top: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-group label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--dark);
+    }
+
+    .review-form input,
+    .review-form select,
+    .review-form textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid rgba(201, 168, 76, 0.4);
+      border-radius: 8px;
+      background: #fdfaf5;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: var(--text);
+      transition: all 0.3s;
+    }
+
+    .review-form input:focus,
+    .review-form select:focus,
+    .review-form textarea:focus {
+      outline: none;
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.15);
+      background: #fff;
+    }
+
+    .review-form button {
+      margin-top: 10px;
+      cursor: pointer;
+      border: none;
+      align-self: center;
+    }
+
     .partner-title {
       margin: 10px 0;
       display: block;
@@ -1545,69 +1597,11 @@
         </p>
       </div>
 
-      <div class="reviews-grid">
-        <!-- Review 1 -->
-        <div class="review-card">
-          <div class="review-quote-icon">"</div>
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">
-            <span data-lang="it">"Luisanna ci ha fatto scoprire angoli nascosti della Ciociaria che non avremmo mai trovato da soli. Preparata, gentile e appassionata!"</span>
-            <span data-lang="en">"Luisanna showed us hidden corners of Ciociaria we would have never found on our own. Knowledgeable, kind and passionate!"</span>
-          </p>
-          <div class="review-author">
-            <div class="review-author-avatar">M</div>
-            <div class="author-info">
-              <h4>Marco &amp; Giulia</h4>
-              <p>
-                <span data-lang="it">Tour Culturale</span>
-                <span data-lang="en">Cultural Tour</span>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Review 2 -->
-        <div class="review-card">
-          <div class="review-quote-icon">"</div>
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">
-            <span data-lang="it">"Il trekking nella Val di Comino è stato spettacolare. Luisanna è una guida attenta alla sicurezza ma allo stesso tempo molto coinvolgente."</span>
-            <span data-lang="en">"The trekking in Val di Comino was spectacular. Luisanna is very attentive to safety while being highly engaging."</span>
-          </p>
-          <div class="review-author">
-            <div class="review-author-avatar">S</div>
-            <div class="author-info">
-              <h4>Sarah J.</h4>
-              <p>
-                <span data-lang="it">Trekking Natura</span>
-                <span data-lang="en">Nature Trekking</span>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Review 3 -->
-        <div class="review-card">
-          <div class="review-quote-icon">"</div>
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">
-            <span data-lang="it">"Un viaggio indimenticabile attraverso l'enogastronomia locale. Consigliatissima a chiunque voglia vivere la vera essenza del Lazio."</span>
-            <span data-lang="en">"An unforgettable journey through the local food and wine. Highly recommended to anyone wanting to experience the true essence of Lazio."</span>
-          </p>
-          <div class="review-author">
-            <div class="review-author-avatar">A</div>
-            <div class="author-info">
-              <h4>Alessandro T.</h4>
-              <p>
-                <span data-lang="it">Esperienza Enogastronomica</span>
-                <span data-lang="en">Food &amp; Wine Experience</span>
-              </p>
-            </div>
-          </div>
-        </div>
+      <div class="reviews-grid" id="reviews-container">
+        <!-- Qui verranno mostrate le vere recensioni una volta ricevute -->
       </div>
 
-      <div class="leave-review-box">
+      <div class="leave-review-box" id="form-recensione">
         <h3>
           <span data-lang="it">Sei già stato in tour con me?</span>
           <span data-lang="en">Have you already toured with me?</span>
@@ -1616,9 +1610,60 @@
           <span data-lang="it">La tua opinione è preziosissima. Racconta la tua esperienza per aiutare altri viaggiatori a scoprire le bellezze che abbiamo esplorato insieme.</span>
           <span data-lang="en">Your feedback is precious. Share your experience to help other travelers discover the beauties we explored together.</span>
         </p>
-        <a href="mailto:luisanna.v@gmail.com?subject=La%20mia%20recensione%20del%20tour&body=Ciao%20Luisanna,%20cco%20la%20mia%20recensione%20del%20tuo%20tour:%0A%0A" class="btn-primary" style="margin: 0 auto; display: inline-flex;">
-          ✎ <span data-lang="it">Lascia una Recensione</span><span data-lang="en">Leave a Review</span>
-        </a>
+
+        <!-- Formsubmit Form -->
+        <!-- Replace luisanna.v@gmail.com with your actual email if needed -->
+        <form action="https://formsubmit.co/luisanna.v@gmail.com" method="POST" class="review-form">
+          <!-- Prevent spam/captcha loops if possible -->
+          <input type="hidden" name="_captcha" value="false">
+          <!-- Thank you page configuration (stay on same page) -->
+          <input type="hidden" name="_next" value="https://lvespa.github.io/ciociaria-tour/#recensioni">
+          <!-- Email Subject -->
+          <input type="hidden" name="_subject" value="Nuova recensione dal sito web!">
+
+          <div class="form-group">
+            <label for="name">
+              <span data-lang="it">Il tuo Nome (o Iniziali)</span>
+              <span data-lang="en">Your Name (or Initials)</span>
+            </label>
+            <input type="text" id="name" name="Nome" required placeholder="Es. Marco & Giulia">
+          </div>
+
+          <div class="form-group">
+            <label for="tour_type">
+              <span data-lang="it">Tour effettuato</span>
+              <span data-lang="en">Tour taken</span>
+            </label>
+            <input type="text" id="tour_type" name="Tour" required placeholder="Es. Tour Culturale (Cassino)">
+          </div>
+
+          <div class="form-group">
+            <label for="rating">
+              <span data-lang="it">Il tuo voto</span>
+              <span data-lang="en">Your rating</span>
+            </label>
+            <select id="rating" name="Voto" required>
+              <option value="5">★★★★★ - Eccellente</option>
+              <option value="4">★★★★ - Molto Buono</option>
+              <option value="3">★★★ - Buono</option>
+              <option value="2">★★ - Sufficiente</option>
+              <option value="1">★ - Da migliorare</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">
+              <span data-lang="it">La tua recensione</span>
+              <span data-lang="en">Your review</span>
+            </label>
+            <textarea id="message" name="Recensione" rows="4" required placeholder="Racconta cosa ti è piaciuto di più..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary">
+            <span data-lang="it">Invia Recensione</span>
+            <span data-lang="en">Submit Review</span>
+          </button>
+        </form>
       </div>
 
     </div>
