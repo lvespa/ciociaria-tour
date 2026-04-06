@@ -836,7 +836,118 @@
       transition: transform 0.4s ease;
     }
     .partner-card:hover .partner-icon {
-      transform: scale(1.15) rotate(5deg);
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    /* ─── REVIEWS ───────────────────────────────────── */
+    .reviews {
+      background: var(--cream);
+      padding: 90px 24px;
+      position: relative;
+    }
+    
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+      margin-bottom: 50px;
+    }
+
+    .review-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 4px 20px rgba(58, 31, 10, 0.06);
+      position: relative;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .review-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(58, 31, 10, 0.1);
+    }
+
+    .review-quote-icon {
+      color: var(--gold);
+      font-size: 2.5rem;
+      opacity: 0.3;
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-family: 'Cormorant Garamond', serif;
+      line-height: 1;
+    }
+
+    .review-stars {
+      color: var(--gold);
+      font-size: 1.1rem;
+      margin-bottom: 16px;
+    }
+
+    .review-text {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      font-style: italic;
+      margin-bottom: 24px;
+    }
+
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .review-author-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--gold-lt);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: var(--dark);
+      font-size: 1.2rem;
+    }
+
+    .author-info h4 {
+      font-size: 1rem;
+      color: var(--dark);
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .author-info p {
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .leave-review-box {
+      text-align: center;
+      background: #fff;
+      border: 1px dashed var(--gold);
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .leave-review-box h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+
+    .leave-review-box p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 24px;
+      line-height: 1.6;
     }
     .partner-title {
       margin: 10px 0;
@@ -1413,6 +1524,103 @@
               data-lang="en">Tour leader licensed by the Lazio Region.</span></p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ══ REVIEWS ══════════════════════════════════════════ -->
+  <section class="reviews" id="recensioni">
+    <div class="section-inner">
+      <div style="text-align:center;">
+        <p class="section-label">
+          <span data-lang="it">Dicono di me</span>
+          <span data-lang="en">What they say</span>
+        </p>
+        <h2 class="section-title">
+          <span data-lang="it">Le Esperienze dei Viaggiatori</span>
+          <span data-lang="en">Travelers' Experiences</span>
+        </h2>
+        <p class="section-desc" style="margin: 0 auto;">
+          <span data-lang="it">Leggi le opinioni di chi ha già scoperto le meraviglie del territorio viaggiando con me.</span>
+          <span data-lang="en">Read the reviews from those who have already discovered the wonders of the territory traveling with me.</span>
+        </p>
+      </div>
+
+      <div class="reviews-grid">
+        <!-- Review 1 -->
+        <div class="review-card">
+          <div class="review-quote-icon">"</div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            <span data-lang="it">"Luisanna ci ha fatto scoprire angoli nascosti della Ciociaria che non avremmo mai trovato da soli. Preparata, gentile e appassionata!"</span>
+            <span data-lang="en">"Luisanna showed us hidden corners of Ciociaria we would have never found on our own. Knowledgeable, kind and passionate!"</span>
+          </p>
+          <div class="review-author">
+            <div class="review-author-avatar">M</div>
+            <div class="author-info">
+              <h4>Marco &amp; Giulia</h4>
+              <p>
+                <span data-lang="it">Tour Culturale</span>
+                <span data-lang="en">Cultural Tour</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-card">
+          <div class="review-quote-icon">"</div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            <span data-lang="it">"Il trekking nella Val di Comino è stato spettacolare. Luisanna è una guida attenta alla sicurezza ma allo stesso tempo molto coinvolgente."</span>
+            <span data-lang="en">"The trekking in Val di Comino was spectacular. Luisanna is very attentive to safety while being highly engaging."</span>
+          </p>
+          <div class="review-author">
+            <div class="review-author-avatar">S</div>
+            <div class="author-info">
+              <h4>Sarah J.</h4>
+              <p>
+                <span data-lang="it">Trekking Natura</span>
+                <span data-lang="en">Nature Trekking</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-card">
+          <div class="review-quote-icon">"</div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            <span data-lang="it">"Un viaggio indimenticabile attraverso l'enogastronomia locale. Consigliatissima a chiunque voglia vivere la vera essenza del Lazio."</span>
+            <span data-lang="en">"An unforgettable journey through the local food and wine. Highly recommended to anyone wanting to experience the true essence of Lazio."</span>
+          </p>
+          <div class="review-author">
+            <div class="review-author-avatar">A</div>
+            <div class="author-info">
+              <h4>Alessandro T.</h4>
+              <p>
+                <span data-lang="it">Esperienza Enogastronomica</span>
+                <span data-lang="en">Food &amp; Wine Experience</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="leave-review-box">
+        <h3>
+          <span data-lang="it">Sei già stato in tour con me?</span>
+          <span data-lang="en">Have you already toured with me?</span>
+        </h3>
+        <p>
+          <span data-lang="it">La tua opinione è preziosissima. Racconta la tua esperienza per aiutare altri viaggiatori a scoprire le bellezze che abbiamo esplorato insieme.</span>
+          <span data-lang="en">Your feedback is precious. Share your experience to help other travelers discover the beauties we explored together.</span>
+        </p>
+        <a href="mailto:luisanna.v@gmail.com?subject=La%20mia%20recensione%20del%20tour&body=Ciao%20Luisanna,%20cco%20la%20mia%20recensione%20del%20tuo%20tour:%0A%0A" class="btn-primary" style="margin: 0 auto; display: inline-flex;">
+          ✎ <span data-lang="it">Lascia una Recensione</span><span data-lang="en">Leave a Review</span>
+        </a>
+      </div>
+
     </div>
   </section>
 
